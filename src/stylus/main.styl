@@ -1,23 +1,1080 @@
-@import url('http://fonts.googleapis.com/css?family=Roboto:300,700,100,400&subset=latin,cyrillic,cyrillic-ext')
+@import url('http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100,400&subset=latin,cyrillic,cyrillic-ext')
+@import url('http://fonts.googleapis.com/css?family=Roboto:100,300,400,700&subset=latin,cyrillic,cyrillic-ext')
 
-@import 'lib/royal_preloader'
 @import nib 
-@import bootstrap    
 @import 'lib/variables'  
-@import 'lib/font-awesome/font-awesome'
-@media (min-width: 768px)
-  @import 'lib/animate' 
-@import 'lib/reveal'          
-@import 'lib/sweetalert'
+@import bootstrap    
+ 
+@import 'lib/photoswipe' 
+@import 'lib/photoswipe-default-skin'
+ 
+::-moz-selection 
+  background-color rgba(0, 0, 0, .6)
+  color #fff
+
+::selection 
+  background-color rgba(0, 0, 0, .6)
+  color #fff
+ 
+
+h1, h2, h3, h4, h5, h6
+  font-family 'Roboto Slab', serif
+
    
-@import 'partials/overflow'
-@import 'partials/navigation' 
-@import 'partials/main' 
-@import 'partials/header' 
-@import 'partials/how' 
-@import 'partials/download'
-@import 'partials/wow'
-@import 'partials/slides' 
-@import 'partials/links'  
-@import 'partials/sale' 
-@import 'partials/footer' 
+
+$color-grey = #666 
+     
+.text 
+  &-bold 
+    font-weight 600
+
+  &--small
+    font-size 1.2rem
+    
+  &--margin-top
+    margin-top 1rem  
+
+.link
+  text-decoration none
+  border-bottom .1rem solid
+  
+  &:hover
+  &:focus
+    text-decoration none
+    border-bottom-width 0  
+
+  &--grey
+    &:hover
+    &:focus
+    &    
+      color $color-grey   
+ 
+
+.btn 
+  border-radius 0
+
+  &-border
+    position relative
+    background none repeat scroll 0 0 rgba(0, 0, 0, 0)
+    width auto
+    display inline-block
+    border .2rem solid #fff
+    color #fff
+    transition all 0.3s ease 0s
+    z-index 1
+
+    &:after 
+      content ''
+      height 0
+      left 0
+      position absolute
+      top 0
+      transition all 0.3s ease 0s
+      width 100%
+      z-index -1
+      background #fff
+
+      
+    &:hover
+    &:focus
+      color #ec3642
+      
+      &:after
+        height 100%
+
+    &-red
+      border-color #ec3642
+
+      &:after 
+        background #ec3642
+        
+      &:hover
+      &:focus
+        color #fff
+        
+      &-full
+        color #ec3642
+
+
+
+
+
+
+.top 
+  &-logo
+    height 26px
+    background url('../img/logo.png') no-repeat
+    margin 2vh 0
+    font-size 1px
+    color white
+ 
+.nav
+  &-box
+    background rgb(33, 33, 33)
+    
+    button
+      span
+        background-color #fff   
+
+    a   
+      color #fff
+      
+      &:hover
+      &:focus
+        color #f44336  
+
+
+  > li 
+    > a      
+      &:hover
+      &:focus
+        background none
+  
+  &-logo
+    display inline-block
+    background url('../img/logo-white.png') 50% no-repeat
+    width 11rem
+    background-size 8rem
+    text-indent -9999px
+    opacity .4
+    
+  // &bar 
+  //   border-width 0
+    
+  //   // &-collapse
+  //   //   border-bottom-width 0
+
+        
+
+
+.section
+  &-title
+    text-align center
+    
+    h2
+      font-size 10vw
+      font-weight 600
+      
+      @media (min-width: $screen-sm-min)
+        font-size 7rem
+        
+    h3
+      font-size 7vw
+      font-weight 600
+      
+      @media (min-width: $screen-sm-min)
+        font-size 5rem
+      
+    p 
+      font-size 3vw
+      
+      @media (min-width: $screen-sm-min)
+        font-size 2rem
+          
+
+
+.header
+  position relative
+  background url('../img/bg-main2.jpg') 50% no-repeat
+  background-size cover
+
+  &:after
+    content ''
+    position absolute
+    top 0
+    left 0 
+    width 100%
+    height 100%
+    background-color rgba(0,0,0,.7)
+    z-index 0
+
+  .container
+    position relative
+    z-index 1  
+
+  .section
+    &-title
+      color #fff
+      margin 6rem 0 10rem
+      
+      p 
+        color #ccc
+        font-size 7vw
+        
+        @media (min-width: $screen-sm-min)
+          font-size 5rem
+        
+
+
+
+.mangirl
+  background none repeat scroll 0 0 #ec3642
+  
+  &-left
+  &-right
+    position relative
+    min-height 52rem
+      
+    &-img
+      position absolute
+      bottom 0
+      right 0
+      width 100%
+      height 100%
+      z-index 0
+      
+      filter url('../img/filters.svg#grayscale')
+      filter gray
+      -webkit-filter grayscale(1)
+      
+    &:hover
+      .mangirl  
+        &-left
+        &-right
+          &-img
+            filter none
+            -webkit-filter grayscale(0)
+
+    .section
+      &-title
+        position relative 
+        color #fff
+        margin 16rem 18.5rem 0 0
+        text-align right   
+        z-index 1
+        
+        p 
+          font-size 1.6rem
+          margin-bottom 2rem
+
+  &-left    
+    &-img
+      background url('../img/man.png') 100% 100% no-repeat
+      
+  &-right
+    background url('../img/split.png') no-repeat scroll left bottom transparent
+    
+    .section
+      &-title
+        text-align left
+        margin 16rem 0 0 18.5rem
+        
+    &-img
+      background url('../img/girl.png') 0% 100% no-repeat
+
+
+.about 
+  background url('../img/about-bg.jpg') 50% no-repeat
+  background-size cover
+  color #fff
+  padding 7rem 0
+  
+  &-box
+    padding 2.2rem 1.6rem
+    text-align right
+    
+    &-icon
+      float right
+      position relative
+      text-align center
+      width 7rem
+      height 7rem
+      background none repeat scroll 0 0 #ec3642
+      font-size 2.8rem
+      line-height 7rem
+      
+      &:after
+        content ''
+        position absolute
+        right -1.4rem
+        top 0
+        border-color #ec3642 transparent transparent
+        border-style solid
+        border-width 1.4rem
+        
+
+    &-text 
+      padding-right 8.5rem   
+      
+      h4
+        margin-top -.8rem
+        font-size 1.6rem
+        white-space nowrap
+        font-weight 600
+        
+        @media (min-width: $screen-sm-min)
+          font-size 2.6rem
+         
+      p 
+        font-size 1.4rem  
+        
+  
+  &-right 
+    .about
+      &-box
+        text-align left
+
+        &-icon
+          float left
+          
+          &:after
+            left -1.4rem
+            right auto
+          
+        &-text
+          padding 0 0 0 8.5rem   
+          
+
+  &-btn 
+    position relative
+    z-index 1
+    text-align center
+    margin-top 6rem
+    
+
+.wiki
+  position relative
+  background url('../img/wiki-bg.jpg') 50% no-repeat
+  background-size cover
+  color #fff
+  padding 7rem 0
+
+  &:after
+    content ''
+    position absolute
+    top 0
+    left 0 
+    width 100%
+    height 100%
+    background-color rgba(236, 54, 66, .8)
+    z-index 0
+
+  .container
+    position relative
+    z-index 1  
+
+    .section
+      &-title
+        text-align left
+      
+
+
+
+
+
+
+
+.team
+  overflow hidden
+  background #f7f7f7
+  padding 5rem 0 9rem
+
+  &-slider
+    height 47rem
+    position relative
+
+  &-shadow
+    box-shadow 0 10px 41px 0 rgba(9, 26, 44, 0.2)
+
+
+
+  &-img
+    position absolute
+    bottom 0
+    width 500rem
+    margin-left -80px
+
+    &-wrap
+      float left
+      bottom 0
+      z-index 9
+      top auto !important
+      border 1px solid #e8e8e8
+      margin-right 15px
+      margin-left 15px
+      box-shadow 0 0 10px #e8e8e8
+
+      &:first-child
+        margin-left 0
+
+      div
+        position relative
+        overflow hidden
+        width 12rem
+        height 12rem
+        background #fff
+        
+        @media (min-width: 992px)
+          width 15rem
+          height 15rem
+
+      &:nth-child(2)
+        div
+          width 300px
+          height 372px
+          
+          @media (min-width: 992px)
+            width 320px
+            height 397px
+          
+          @media (min-width: 1200px)
+            width 350px
+            height 440px
+
+      img
+        position absolute
+        max-width 100%
+        height auto
+        max-height 100%
+        top 50%
+        transform translateY(-50%)
+
+  &-text
+    margin-top 30px
+    
+    &-inner
+      display none
+
+  &-wrap
+    position absolute
+    right 48%
+    bottom 175px
+    z-index 19
+    
+    .arrow-left
+      margin-right 1.5rem
+
+    span
+      font-size 3rem
+      width 41px
+      height 41px
+      cursor pointer
+      color #666
+      display inline-block
+      transition border .2s
+
+      &:hover
+      &:focus
+        opacity .5
+
+
+
+
+
+
+
+
+
+
+.steps
+  background #696969
+  color #fff
+  padding 5rem 0
+  
+  .section-title
+    text-align center
+    
+    @media (min-width: $screen-md-min)
+      text-align left
+    
+    h3
+      font-size 3rem
+      margin-top 0
+
+  &-item
+    
+    p
+      position relative
+      height 41px
+      
+      width 60%
+      margin 20px auto 20px
+      padding 0 15px 0 50px
+    
+      @media (min-width: $screen-md-min)
+        width auto
+        margin 0 0 20px 0
+        padding 0 0 0 46px
+
+      &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 41px
+        height 41px
+        background url('../img/sprite-steps.png') 0 0 no-repeat
+      
+      &:after
+        content ''
+        position absolute
+
+        top auto
+        right -12px
+        bottom 100%
+        background url('../img/sprite-icons.png') no-repeat 0 -105px
+        height 61px
+        width 18px
+        margin 0 0 -14px
+        
+        @media (min-width: $screen-md-min)
+          top 100%
+          right 100%
+          bottom auto
+          background url('../img/sprite-icons.png') no-repeat 0 -72px
+          width 61px
+          height 13px
+          margin -1px 15px 0 0
+        
+        
+    &:nth-child(2)
+      p
+        &:before
+          background-position 0 -56px  
+        
+    &:nth-child(3)
+      p
+        &:before
+          background-position 0 -117px
+        
+    &:nth-child(4)
+      p
+        &:before
+          background-position 0 -174px
+        
+    &:nth-child(1)
+      p
+        &:after
+          display none
+          
+    @media (max-width: $screen-md-min)
+      &:nth-child(odd)
+        p
+          &:after
+            right auto
+            left -33px
+            transform scaleX(-1)
+            margin 0 0 -14px
+      
+
+
+
+
+
+
+
+.photo
+  background #f4f4f4
+  padding 7rem 0  5rem
+
+  &-box
+    position relative
+    
+    &:before
+      content ''
+      display block
+      padding-top 100%
+
+  &-content
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+    background-size cover
+    background-position 50%
+
+  &-btn
+    margin 2rem 0 0
+    text-align center
+    position relative 
+    z-index 1
+
+
+
+@media (max-width: 769px)
+  .team .container 
+    padding-right 0
+    padding-left 0
+    
+  .team-slider 
+    height 780px
+    
+  .team-img 
+    margin-left -120px
+
+  .team-wrap 
+    bottom 380px
+    right 50%
+    margin-right -50px
+
+@media (max-width: 600px) 
+  .team-img 
+    margin-left -144px
+
+@media (max-width: 500px)
+  .team-slider
+    height 850px
+    
+
+
+  
+
+.counters
+  position relative
+  background url('../img/bg-counters.jpg') 50% no-repeat
+  background-size cover
+  color #fff
+  padding 7rem 0
+
+  &:before
+    content ''
+    position absolute
+    top 0
+    left 0 
+    width 100%
+    height 100%
+    background none repeat scroll 0 0 rgba(25, 25, 25, .7)
+    z-index 0
+
+  .container
+    position relative
+    z-index 1  
+  
+  &-box  
+    .counters-item  
+      background rgba(195, 42, 42, .7)
+      color #fff
+      text-align center
+      padding 3rem 2rem
+      
+      h4 
+        font-size 4rem
+    
+    &:nth-child(odd)
+      .counters-item
+        background rgba(255, 255, 255, .7)
+      
+        h4 
+          color #3d3d3d
+          
+        p 
+          color #656363  
+          
+
+
+
+.qw
+  text-align center
+  padding 7rem 0
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'lib/flickity' 
+@import 'partials/grid'   
+
+
+
+
+
+
+
+   
+
+
+
+@import 'lib/dialog'    
+@import 'lib/dialog-wilma'
+
+.checkout
+  position absolute
+  top 0
+  left 0
+  width 100%
+  text-align left
+  z-index 2
+    
+  &__icon
+  &__close
+    margin 1rem
+
+  &__icon
+    color #fff
+    font-weight 400
+    font-size 2em
+
+  &__close 
+    position absolute
+    top 0
+    right 0
+    color #ec3642
+    cursor pointer
+    line-height 0
+    font-size 2rem
+    
+    &:hover
+    &:focus
+      color rgba(#ec3642, .4) 
+      
+
+
+
+
+.input
+  position relative
+  z-index 1
+  display inline-block
+  vertical-align top
+  
+  &__box
+    &--center
+      text-align center
+
+.input__field
+  position relative
+  display block
+  float right
+  // padding 0.8em
+  // width 60%
+  border none
+  border-radius 0
+  background #f0f0f0
+  color #aaa
+  -webkit-appearance none
+  
+  &:focus
+    outline none
+
+.input__label
+  display inline-block
+  float right
+  margin 0
+  // width 40%
+  // color #6a7989
+  // font-size 70.25%    
+  font-size 1.4rem
+  font-weight normal
+  color #666
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  user-select none
+
+.input__label-content
+  position relative
+  padding 1.2rem .4rem
+  display block
+  width 100%
+
+.graphic
+  position absolute
+  top 0
+  left 0
+  fill none
+
+.icon
+  color #ddd
+  font-size 150%
+
+.input--haruki
+  // margin 4em 1em 1em
+
+.input__field--haruki
+  padding 0 .4rem
+  width 100%
+  background transparent
+  font-size 1.6rem
+  line-height 4.4rem
+
+.input__label--haruki
+  position absolute
+  width 100%
+  text-align left
+  pointer-events none
+  &::before
+    top 0
+  &::after
+    bottom 0
+
+.input__label-content--haruki
+  transition transform 0.3s
+
+.input__label--haruki::before,
+.input__label--haruki::after
+  content ''
+  position absolute
+  left 0
+  z-index -1
+  width 100%
+  height .2rem
+  background #ec3642 
+  transition transform 0.3s
+
+.input__field--haruki:focus + .input__label--haruki .input__label-content--haruki,
+.input--filled .input__label-content--haruki
+  transform translate3d(0, -90%, 0)
+
+.input__field--haruki:focus + .input__label--haruki::before,
+.input--filled .input__label--haruki::before
+  transform translate3d(0, -0.5em, 0)
+
+.input__field--haruki:focus + .input__label--haruki::after,
+.input--filled .input__label--haruki::after
+  transform translate3d(0, 0.5em, 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  height: 50px
+  width: 100%
+  background: #31353d
+  text-align: center
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1)
+  z-index: 4
+
+@media only screen and (min-width: 1200px)
+  header
+    height: 80px
+
+#logo
+  padding-top: 5px
+  transform: scale(0.8)
+
+@media only screen and (min-width: 1200px)
+  #logo
+    padding-top: 20px
+    position: absolute
+    left: 2.4em
+    top: 0
+    transform: scale(1)
+
+#cd-hamburger-menu, #cd-cart-trigger
+  position: absolute
+  top: 0
+  height: 100%
+
+#cd-hamburger-menu a, #cd-cart-trigger a
+  width: 60px
+  height: 100%
+
+#cd-hamburger-menu
+  left: 0
+  a
+    background: #26292f url("../img/cd-hamburger-menu.svg") no-repeat center center
+
+@media only screen and (min-width: 1200px)
+  #cd-hamburger-menu
+    display: none
+
+#cd-cart-trigger
+  right: 0
+  a
+    background: #26292f url("../img/cd-cart.svg") no-repeat center center
+
+@media only screen and (min-width: 1200px)
+  #cd-cart-trigger
+    right: 0
+    a
+      position: relative
+      width: 100px
+      border-left: none
+      background-color: #26292f
+
+#main-nav, #cd-cart
+  position: fixed
+  top: 0
+  height: 100%
+  width: 260px
+  padding-top: 50px
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+  z-index: 3
+
+@media only screen and (min-width: 768px)
+  #main-nav, #cd-cart
+    width: 350px
+
+@media only screen and (min-width: 1200px)
+  #main-nav, #cd-cart
+    width: 30%
+    padding-top: 80px
+
+#main-nav
+  left: -100%
+  background: #FFF
+  transition: left 0.3s
+  &.speed-in
+    left: 0
+  ul
+    a
+      display: block
+      height: 50px
+      line-height: 50px
+      padding: 0 1em
+      border-bottom: 1px solid #e0e6ef
+    .current
+      box-shadow: inset 3px 0 #435779
+
+@media only screen and (min-width: 1200px)
+  #main-nav
+    position: absolute
+    height: auto
+    width: auto
+    left: auto
+    right: 8em
+    padding-top: 0
+    top: 0
+    background: transparent
+    box-shadow: none
+    line-height: 80px
+    z-index: 4
+    li
+      display: inline-block
+      margin-left: 1em
+    ul a
+      display: inline-block
+      height: auto
+      line-height: 1
+      padding: 1em 1.4em
+      border-bottom: none
+      color: rgba(255, 255, 255, 0.8)
+      border-radius: 0.25em
+      &.current
+        box-shadow: none
+        background: #435779
+        color: #FFF
+  .no-touch #main-nav ul a:hover
+    background: #435779
+    color: #FFF
+
+.no-js #main-nav
+  position: fixed
+
+#cd-cart
+  right: -100%
+  background: #FFF
+  -webkit-transition: right 0.3s
+  -moz-transition: right 0.3s
+  transition: right 0.3s
+  &.speed-in
+    right: 0
+  > *
+    padding: 0 1em
+  h2
+    font-size: 14px
+    font-size: 0.875rem
+    font-weight: bold
+    text-transform: uppercase
+    margin: 1em 0
+  .cd-cart-items
+    padding: 0
+    li
+      position: relative
+      padding: 1em
+      border-top: 1px solid #e0e6ef
+      &:last-child
+        border-bottom: 1px solid #e0e6ef
+  .cd-qty
+    color: #a5aebc
+  .cd-price
+    color: #a5aebc
+    margin-top: .4em
+  .cd-item-remove
+    position: absolute
+    right: 1em
+    top: 50%
+    bottom: auto
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
+    transform: translateY(-50%)
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    background: url("../img/cd-remove-item.svg") no-repeat center center
+
+.no-touch #cd-cart .cd-item-remove:hover
+  background-color: #e0e6ef
+
+#cd-cart
+  .cd-cart-total
+    padding-top: 1em
+    padding-bottom: 1em
+    span
+      float: right
+    &::after
+      content: ''
+      display: table
+      clear: both
+  .checkout-btn
+    display: block
+    width: 100%
+    height: 60px
+    line-height: 60px
+    background: #7dcf85
+    color: #FFF
+    text-align: center
+
+.no-touch #cd-cart .checkout-btn:hover
+  background: #a2dda8
+
+#cd-cart .cd-go-to-cart
+  text-align: center
+  margin: 1em 0
+  a
+    text-decoration: underline
+
+@media only screen and (min-width: 1200px)
+  #cd-cart
+    > *
+      padding: 0 2em
+    .cd-cart-items li
+      padding: 1em 2em
+    .cd-item-remove
+      right: 2em
+      
+
+.cd-img-replace
+  display: inline-block
+  overflow: hidden
+  text-indent: 100%
+  white-space: nowrap   

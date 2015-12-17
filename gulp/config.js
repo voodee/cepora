@@ -10,7 +10,8 @@ module.exports = {
   },
   stylus: {
     src: src + "/stylus/*.styl",
-    dest: dest + "/css"
+    dest: dest + "/css",
+    watch: src + "/stylus/**"
   },
   images: {
     src: src + "/images/**",

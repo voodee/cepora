@@ -3,14 +3,14 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-    %title Мобильная медсестра
+    %title Cepora!
     %meta{:content => "", :name => "description"}
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
     %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}
     / Place favicon.ico in the root directory
     %link{:href => "css/main.css", :rel => "stylesheet"}
     %script{:src => "js/modernizr-2.8.3.min.js"}
-  %body.royal_preloader
+  %body
     /[if lt IE 8]
       %p.browserupgrade 
         You are using an 
@@ -20,326 +20,363 @@
         to improve your experience
     / Add your site or application content here
 
-    .section.navigation
-      .container-fluid.navigation-container
+    / .top
+    /   .container
+    /     .row
+    /       .col-lg-3.col-md-3.col-sm-4.col-xs-9
+    /         %h1.top-logo Cepora
+
+    .nav-box
+      
+      .navbar
+        .container
+          .navbar-header
+            %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#main-navbar", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Меню
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand.nav-logo{:href => '#', :title => ''} Cepora
+
+          #main-navbar.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li.active
+                %a{:href => "#", :title => ''}
+                  Каталог
+                  %span.sr-only (текущая)
+              %li
+                %a{:href => "#", :title => ''} 
+                  Оплата и доставка
+                  %span.sr-only (текущая)
+              %li
+                %a{:href => "#", :title => ''}
+                  Отзывы
+                  %span.sr-only (текущая)
+              %li
+                %a{:href => "#", :title => ''}
+                  Контакты
+                  %span.sr-only (текущая)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+    %header.section.header
+      .container
         .row
-          .col-md-3.col-sm-6.navigation-logo
-            %h1 
-              %a{ :href => '#', :title => '' } Мобильная медсестра
-
-          .col-md-4.hidden-sm.hidden-xs.navigation-menu
-            %ul.navigation-menu-ul
-              %li
-                %a{ :href => '#', :title => '', 'data-reveal-id': 'form-pdf' } Презентация PDF
-              %li
-                %a{ :href => '#', :title => '', 'data-reveal-id': 'form-mediakit' } Mediakit
+          .col-md-12.section-title
+            %h2 Энергетические браслеты
+            %p от производителя
 
 
-          .col-md-5.col-sm-6.navigation-download
-            %span.navigation-download-text Скачать приложение
-            %a.navigation-download-link.navigation-download-android{ :href => '#', :title => '' } 
-            %a.navigation-download-link.navigation-download-apple{ :href => '#', :title => '' } 
-            %a.navigation-download-link.navigation-download-windows{ :href => '#', :title => '' } 
-
-   
-    %main.main#skrollr-body   
-      %header.section.header
-        .container
-          .row.header-panel
-            .col-md-12
-              %h2.main-title
-                Здоровье не переоценено.
-                %br
-                Держи его под контролем!
-
-              %p.main-desc
-                Мобильная медсестра — надежный помощник 
-                %br
-                на вашем пути к выздоровлению!
-                
-              %p.main-btn.hidden-xs
-                %a.btn.btn-lg2.btn-default2#scroll-to-how{ :href => '#', :title => '' } Как это работает?
+    %section.mangirl
+      .container
+        .row
+          .mangirl-left.col-md-6.col-sm-6.col-xs-12
+            .mangirl-left-img
+            .section-title
+              %h3 Для Мужчин
+              %p 
+                Основной компонент — турмалин влияниет на эректильную функцию. Мужской 
+                %span.text-bold потенциал возрастет в разы,
+                без использования таблеток и БАДов!
+              %a.btn.btn-lg.btn-border{ :href => '#', :title => '' } Подробнее
 
 
-      .section.how.animate-box.hidden-xs
-        .container-fluid
-          .row.hidden-sm.hidden-xs
-            .col-md-12.animate-check
-              %h2.main-title2#how-title Как это работает?
-          .row
-            .col-md-5.how-left.hidden-sm.animate-left0.invisible
-            .col-md-2.how-phone
-              .how-phone-img{ 'data-bottom-top' => 'top: -43vh', 'data-bottom' => 'top: 0vh' }
-            .col-md-5.how-right.hidden-sm.animate-right0.invisible
+          .mangirl-right.col-md-6.col-sm-6.col-xs-12
+            .mangirl-right-img
+            .section-title
+              %h3 Для Женщин
+              %p Благоприятно влияет на организм, увеличивает сопротивляемость заболеваниям, способствуют похудению, помогает улучшать спортивные результаты.
+              %a.btn.btn-lg.btn-border{ :href => '#', :title => '' } Подробнее
 
 
-      / .section.download.animate-box
-      /   .container
-      /     .row
-      /       .col-md-6.hidden-sm.hidden-xs.download-img.animate-left0.invisible
-      /         %img{ :src => 'img/pic3.jpg', :title => '', :alt => '' }
-      /       .col-md-6.download-text.animate-right0.invisible
-      /         %h2.main-title2 Вы получаете назначение от врача и заносите данные в приложение
-      /         %p.main-desc2.animate-right1.invisible Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины. Можно ещё чуть больше, на пару строчек. Ещё больше текста.
+    %section.about
+      .container
+        .row
+          .col-md-12.section-title
+            %h3 8 причин купить браслет
+            %p &nbsp;
 
-      /         #download-links.animate-right2
-      /           .download-store.invisible
-      /             %span.download-store-text Доступно в 
-      /             %a{ :href => '#', :title => '', :alt => '' } 
-      /               %img{ :alt => "Get it on Google Play", :src => "https://developer.android.com/images/brand/ru_generic_rgb_wo_45.png" }
-      /             %a{ :href => '#', :title => '', :alt => '' } 
-      /               %img{ :alt => "Download on the App Store", :src => "img/Download_on_the_App_Store_Badge_RU.svg" }
+          .col-md-6.col-sm-6.col-xs-12.about-left
+            .about-box.clearfix
+              .about-box-icon.fa.fa-battery-3
+              .about-box-text
+                %h4 Повышает выносливость
+                / %p Поддержать жизненные силы на должном уровне
+                %p Вулканический пепел и турмалин оптимизируют и усиливают энергию человеческого организма, направляя её именно в те органы, которые наиболее в этом нуждаются, что придаёт сил и энергии
 
 
+            .about-box.clearfix
+              .about-box-icon.fa.fa-shield
+              .about-box-text
+                %h4 Улучшают иммунитет
+                / %p Поддержать жизненные силы на должном уровне
+                %p Кристаллы турмалина — природного минерала, способны поглощать вредные микроволны, которые провоцируют стрессы и болезни
+
+            .about-box.clearfix
+              .about-box-icon.fa.fa-heartbeat
+              .about-box-text
+                %h4 Оздоравливает организм
+                %p Турмалин способен испускать лучи инфракрасного спектра, которые проникают глубоко в организм, активируя его защитные функции и обеспечивая оздоровление всех без исключения органов на клеточном уровне
+
+            .about-box.clearfix
+              .about-box-icon.fa.fa-balance-scale
+              .about-box-text
+                / %h4 Восстанавливает и поддерживает энергетический баланс
+                %h4 Контролирует баланс
+                %p Энергетические вибрации турмалина идентичны микроволнам человеческого тела, и именно поэтому они способны стимулировать энергетические потоки в организме
+
+          .col-md-6.col-sm-6.col-xs-12.about-right
+
+            .about-box.clearfix
+              .about-box-icon.fa.fa-check
+              .about-box-text
+                %h4 Cпособствуют похудению
+                %p Турмалин вырабатывают отрицательно заряженные ионы, ускоряет метаболизм и помогает снизить аппетит, что позволяет постепенно привести в норму вес и улучшить самочувствие
+
+            .about-box.clearfix
+              .about-box-icon.fa.fa-smile-o
+              .about-box-text
+                %h4 Устраняет головные боли
+                %p Две миларовых голограммы, которые взаимодействуют с электромагнитным полем человека, повышают положительные мозговые частоты 
+
+            .about-box.clearfix
+              .about-box-icon.fa.fa-thumbs-o-up
+              .about-box-text
+                %h4 Нормализует нервную систему
+                %p Ношение браслета крайне благотворно влияет на психику человека, способствует улучшению энергетики носителя, что в конечном итоге приводит к положительным изменениям в качестве жизни
+
+            .about-box.clearfix
+              .about-box-icon.fa.fa-recycle
+              .about-box-text
+                %h4 Выводит токсины
+                %p Высокопрочный экологически чистый силикон, который является основой браслета, содержит в своём составе высокий процент вулканического пепла — одного из самых лучших природных абсорбентов, вытягивающий из организма шлаки и токсины
+
+        .row
+          .col-md-12.about-btn
+            %a.btn.btn-lg.btn-border.btn-border-red{ :href => '#', :title => '' } Оставить заявку    
 
 
-      .section.wow.animate-box
-        .container
-          .row
-            .col-md-6.wow-text.animate-left0.invisible
-              %h2.main-title2 Вы получаете назначение от врача и заносите данные в приложение
-              %p.main-desc2.animate-left1.invisible
-                Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-              %p.main-desc2.animate-left2.invisible
-                Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-
-              #wow-links.animate-left3
-                .download-store.invisible
-                  %span.download-store-text Доступно в 
-                  %a{ :href => '#', :title => '', :alt => '' } 
-                    %img{ :alt => "Get it on Google Play", :src => "https://developer.android.com/images/brand/ru_generic_rgb_wo_45.png" }
-                  %a{ :href => '#', :title => '', :alt => '' } 
-                    %img{ :alt => "Download on the App Store", :src => "img/Download_on_the_App_Store_Badge_RU.svg" }
-
-      .section.buttons
-        .container 
-          .row
-            .col-md-2.col-sm-4.col-xs-6.buttons-item.active
-              %a{ :href => '#', :title => '' }
-                %span Умные уведомления
-            .col-md-2.col-sm-4.col-xs-6.buttons-item
-              %a{ :href => '#', :title => '' }
-                %span Cправочники
-            .col-md-2.col-sm-4.col-xs-6.buttons-item
-              %a{ :href => '#', :title => '' }
-                %span Выбор куратора
-            .col-md-2.col-sm-4.col-xs-6.buttons-item
-              %a{ :href => '#', :title => '' }
-                %span Архив и синхронизация
-            .col-md-2.col-sm-4.col-xs-6.buttons-item
-              %a{ :href => '#', :title => '' }
-                %span Интеграция
-            .col-md-2.col-sm-4.col-xs-6.buttons-item
-              %a{ :href => '#', :title => '' }
-                %span Отчетность
-
-      .section.slides
-        .nav.slides-nav.hidden-sm.hidden-xs
-          %a.active{ :href => '#', :title => '' } Слайд 1
-          %a{ :href => '#', :title => '' } Слайд 2
-          %a{ :href => '#', :title => '' } Слайд 3
-          %a{ :href => '#', :title => '' } Слайд 4
-          %a{ :href => '#', :title => '' } Слайд 5
-          %a{ :href => '#', :title => '' } Слайд 6
-
-        .slides-box
-          .slides-item.animate-box
-            .container-fluid.slides-item-images.animate-right0.invisible
-            .container.animate-left0.invisible
-              .row
-                .col-md-2.slides-icon-box.animate-check
-                  .slides-icon.slides-icon-1 
-              .row
-                .col-md-6.slides-text
-                  %h2.main-title2 Вы получаете назначение от врача и заносите данные в приложение
-                  %p.main-desc2.animate-left1.invisible
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-                  %p.main-desc2.animate-left2.invisible
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-
-          .slides-item
-            .container-fluid.slides-item-images
-            .container
-              .row
-                .col-md-2.slides-icon-box
-                  .slides-icon.slides-icon-2
-              .row
-                .col-md-6.slides-text
-                  %h2.main-title2 Вы получаете назначение от врача и заносите данные в приложение
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-
-          .slides-item
-            .container-fluid.slides-item-images
-            .container
-              .row
-                .col-md-2.slides-icon-box
-                  .slides-icon.slides-icon-3
-              .row
-                .col-md-6.slides-text
-                  %h2.main-title2 Вы получаете назначение от врача и заносите данные в приложение
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-
-          .slides-item
-            .container-fluid.slides-item-images
-            .container
-              .row
-                .col-md-2.slides-icon-box
-                  .slides-icon.slides-icon-4
-              .row
-                .col-md-6.slides-text
-                  %h2.main-title2 Вы получаете назначение от врача и заносите данные в приложение
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-
-          .slides-item
-            .container-fluid.slides-item-images
-            .container
-              .row
-                .col-md-2.slides-icon-box
-                  .slides-icon.slides-icon-5
-              .row
-                .col-md-6.slides-text
-                  %h2.main-title2 Вы получаете назначение от врача и заносите данные в приложение
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-
-          .slides-item
-            .container-fluid.slides-item-images
-            .container
-              .row
-                .col-md-2.slides-icon-box
-                  .slides-icon.slides-icon-6
-              .row
-                .col-md-6.slides-text
-                  %h2.main-title2 Вы получаете назначение от врача и заносите данные в приложение
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-                  %p.main-desc2 
-                    Вам нужно всего лишь воспользоваться удобным интерфейсом заполнеения данных и другой маркетинговый текст приблизительно такой длины.
-
-      .section.links#links.animate-box
-        .container
-          .row
-            .col-md-12.animate-left0.invisible
-              .download-store
-                %span.download-store-text Доступно в 
-                %a{ :href => '#', :title => '', :alt => '' } 
-                  %img{ :alt => "Get it on Google Play", :src => "https://developer.android.com/images/brand/ru_generic_rgb_wo_45.png" }
-                %a{ :href => '#', :title => '', :alt => '' } 
-                  %img{ :alt => "Download on the App Store", :src => "img/Download_on_the_App_Store_Badge_RU.svg" }
-
-      .section.sale
-        .container
-          .row
-            .col-md-12.sale-text
-              %h2.main-title2
-                Подпишитесь на обновление!
-
-              %p.main-desc2
-                Без спама и рекламы. Мы не распространяем ваши почтовые ящики третьим лицам.
- 
-          .row
-            .col-md-12
-              %form.form-inline
-                .form-group
-                  %input.form-control{:placeholder => "Ваша почта", :type => "text"}
-                %button.btn.btn-primary2{:type => "submit"} Подписаться
+    %section.wiki
+      .container
+        .row
+          .col-md-12.section-title
+            %h3 Биомагнитное поле
+            %p 
+              Каждый человек (организм) окружен биомагнитным полем, которое защищает его от воздействия агрессивных факторов окружающей среды. Но современный ритм жизни с его постоянными стрессами, несбалансированным питанием и загрязненной экологией выливается в истощение защитного экрана — того самого биомагнитного поля.
+            %p
+              Как результат — биологические структуры организма подвергаются энергетическому ослаблению. Это ведет к изнашиванию ораганизма, преждевременному старению и недовыработке клетками необходимой энергии.
 
 
-      %footer.section.footer
-        .container
-          .row
-            .col-md-3.col-sm-6.footer-logo
-              %h1 
-                %a{ :href => '#', :title => '' } Мобильная медсестра
+    %section.team
+      .container
+        .team-slider
+          .team-img
+            .team-img-wrap
+              %div
+                %img{:alt => "", :src => "img/item/pure/red-black.jpg"}
+            .team-img-wrap
+              %div
+                %img{:alt => '', :src => "img/item/pure/white-gray.jpg"}
+            .team-img-wrap
+              %div
+                %img{:alt => '', :src => "img/item/pure/white-gray.jpg"}
+            .team-img-wrap
+              %div
+                %img{:alt => '', :src => "img/item/pure/white-gray.jpg"}
 
-            .col-md-4.hidden-sm.hidden-xs.footer-text.navigation-menu
-              %ul.navigation-menu-ul
-                %li
-                  %a{ :href => '#', :title => '', 'data-reveal-id': 'form-pdf' } Презентация PDF
-                %li
-                  %a{ :href => '#', :title => '', 'data-reveal-id': 'form-mediakit' } Mediakit
+          .col-xs-12.col-sm-7.col-sm-offset-5.col-md-6.col-md-offset-6.col-lg-7.col-lg-offset-5
+            .team-text
+              .team-text-inner
+                %h4.team-name Мрамор
+                %h6.sub-info др.-греч. μάρμαρος — «белый или блестящий камень»
+                .team-text
+                  Мрамор прекрасно
+                  %span.bold устойчивость к теплу, влажности и большим нагрузкам
+                  делает материал идеальным для изготовления подоконников, столешниц, моек и барных стоек.
+                .clearfix
 
-            .col-md-5.col-sm-6.footer-social
-              %ul.footer-social-ul
-                %li.footer-social-li
-                  %a.footer-social-icon{ :href => '#', :title => ''}
-                    %i.fa.fa-google-plus
-                %li.footer-social-li
-                  %a.footer-social-icon{ :href => '#', :title => ''}
-                    %i.fa.fa-facebook
-                %li.footer-social-li
-                  %a.footer-social-icon{ :href => '#', :title => ''}
-                    %i.fa.fa-twitter
+              .team-text-inner
+                %h4.team-name Кварц
+                %h6.sub-info нем. Quarz
+                .team-text
+                  Кварц
+                  %span.bold положительно влияет на грудную клетку
+                  и
+                  %span.bold органы дыхания
+                  Считается, что если держать при себе изделие из кварца, это значительно облегчает течение простудных заболеваний.
+                  %span.bold кварцевая вода
+                  Ее получают путем настаивания воды на кварце или пропусканием обычной воды через фильтр из специальной смеси различных видов кварца.
+                .clearfix
 
+              .team-text-inner
+                %h4.team-name Кварц
+                %h6.sub-info нем. Quarz
+                .team-text
+                  Кварц
+                  %span.bold положительно влияет на грудную клетку
+                  и
+                  %span.bold органы дыхания
+                  Считается, что если держать при себе изделие из кварца, это значительно облегчает течение простудных заболеваний.
+                  %span.bold кварцевая вода
+                  Ее получают путем настаивания воды на кварце или пропусканием обычной воды через фильтр из специальной смеси различных видов кварца.
+                .clearfix
 
-    #form-mediakit.reveal-modal
-      %h2 Получить Mediakit
-      %form#ss-form{:action => "https://docs.google.com/forms/d/1RAUNrG71N2oznEsTKW9GFj_ZsITxDF5V4eT4Aap5DQY/formResponse", :method => "POST", :onsubmit => "submitted=true;", :target => "hidden_iframe"}
-        .form-group
-          %label{ :for => "entry_1839168028" } Ваше Имя
-          %input#entry_1839168028.form-control{"aria-label" => "Ваше Имя  ", :dir => "auto", :name => "entry.1839168028", :title => "", :type => "text", :value => ""}
-        
-        .form-group
-          %label{ :for => "entry_1413954203" } Компания
-          %input#entry_1413954203.form-control{"aria-label" => "Компания  ", :dir => "auto", :name => "entry.1413954203", :title => "", :type => "text", :value => ""}
-        
-        .form-group
-          %label{ :for => "entry_553365034" } E-Mail
-          %input#entry_553365034.form-control{"aria-label" => " E-Mail  ", "aria-required" => "true", :dir => "auto", :name => "entry.553365034", :required => "required", :title => "", :type => "email", :value => ""}
+              .team-text-inner
+                %h4.team-name Кварц
+                %h6.sub-info нем. Quarz
+                .team-text
+                  Кварц
+                  %span.bold положительно влияет на грудную клетку
+                  и
+                  %span.bold органы дыхания
+                  Считается, что если держать при себе изделие из кварца, это значительно облегчает течение простудных заболеваний.
+                  %span.bold кварцевая вода
+                  Ее получают путем настаивания воды на кварце или пропусканием обычной воды через фильтр из специальной смеси различных видов кварца.
+                .clearfix
 
-        .form-group
-          %label{ :for => "entry_82576170" } Сообщение
-          %textarea#entry_82576170.form-control{"aria-label" => "Сообщение  ", :cols => "0", :dir => "auto", :name => "entry.82576170", :rows => "4"}
-
-        %input{:name => "draftResponse", :type => "hidden", :value => "[,,\"-6942591810798842569\"]\r\n"}
-        %input{:name => "pageHistory", :type => "hidden", :value => "0"}
-        %input{:name => "fvv", :type => "hidden", :value => "0"}
-        %input{:name => "fbzx", :type => "hidden", :value => "-6942591810798842569"}
-        %input#ss-submit.btn.btn-lg.btn-primary{:name => "submit", :type => "submit", :value => "Готово"}
-
-      %a.close-reveal-modal &#215;   
+          .team-wrap
+            %span.arrow-left
+              %i.fa.fa-chevron-left
+            %span.arrow-right
+              %i.fa.fa-chevron-right
 
 
 
-    #form-pdf.reveal-modal
-      %h2 Получить презентацию проекта
-      %form#ss-form{:action => "https://docs.google.com/forms/d/1Mhq5-jDqwmG9kZ0AUkf_yEnA_on5KYDgxmzObEOZsCc/formResponse", :method => "POST", :onsubmit => "submitted=true;", :target => "hidden_iframe"}
-        .form-group
-          %label{ :for => "entry_42945489" } Ваше Имя
-          %input#entry_42945489.form-control{"aria-label" => "Ваше Имя  ", :dir => "auto", :name => "entry.42945489", :title => "", :type => "text", :value => ""}
-        
-        .form-group
-          %label{ :for => "entry_1604023970" } Компания
-          %input#entry_1604023970.form-control{"aria-label" => "Компания  ", :dir => "auto", :name => "entry.1604023970", :title => "", :type => "text", :value => ""}
-        
-        .form-group
-          %label{ :for => "entry_5713699" } E-Mail
-          %input#entry_5713699.form-control{"aria-label" => " E-Mail  ", "aria-required" => "true", :dir => "auto", :name => "entry.5713699", :required => "required", :title => "", :type => "email", :value => ""}
+    %section.steps
+      .container
+        .row
+          .col-md-4.section-title
+            %h3 Как мы работаем
+          .col-md-8
+            .row  
+              .col-md-3.steps-item
+                %p Вы оставляете заявку на сайте
+              .col-md-3.steps-item
+                %p Мы связываемся с вами
+              .col-md-3.steps-item
+                %p Отправлем вашу посылку
+              .col-md-3.steps-item
+                %p Вы оплачиваете при получении
+            
 
-        .form-group
-          %label{ :for => "entry_914677203" } Сообщение
-          %textarea#entry_914677203.form-control{"aria-label" => "Сообщение  ", :cols => "0", :dir => "auto", :name => "entry.914677203", :rows => "4"}
+    %section.photo
+      .container-fluid
+        .row
+          .col-md-12.section-title
+            %h3 Присоединяйся к нам!
+            %p &nbsp;
+        .row.photo-row
+          / .col-md-3
+          /   .photo-box
+          /     .photo-content{ :style => 'background-image: url("img/photo/user1.jpg")' }
 
-        %input{:name => "draftResponse", :type => "hidden", :value => "[,,\"-481916804165446593\"]\r\n"}
-        %input{:name => "pageHistory", :type => "hidden", :value => "0"}
-        %input{:name => "fvv", :type => "hidden", :value => "0"}
-        %input{:name => "fbzx", :type => "hidden", :value => "-481916804165446593"}
-        %input#ss-submit.btn.btn-lg.btn-primary{:name => "submit", :type => "submit", :value => "Готово"}
 
-      %a.close-reveal-modal &#215;
 
-    :javascript
-      var submitted = false;
-    %iframe#hidden_iframe{:name => "hidden_iframe", :onload => "if(submitted) {$('.reveal-modal').trigger('reveal:close'); swal('Хорошая работа!', 'Ваша заявка принята!', 'success')}", :style => "display:none;"}
+        .row
+          .col-md-12.photo-btn
+            %a.btn.btn-lg.btn-border.btn-border-red.btn-border-red-full#btn-more-photo{ :href => '#', :title => '' } Ещё фото
+
+
+
+    %section.counters
+      .container
+
+        .row
+          .col-md-2.counters-box
+            .counters-item
+              %h4 2033
+              %p участников
+          .col-md-2.counters-box
+            .counters-item
+              %h4 2033
+              %p участников
+          .col-md-2.counters-box
+            .counters-item
+              %h4 2033
+              %p участников
+          .col-md-2.counters-box
+            .counters-item
+              %h4 2033
+              %p участников
+          .col-md-2.counters-box
+            .counters-item
+              %h4 2033
+              %p участников
+          .col-md-2.counters-box
+            .counters-item
+              %h4 2033
+              %p участников
+
+
+    %section.qw
+      .container-fluid
+        .row
+          .col-md-12.section-title
+            %h3 Остались вопросы?
+            %p Задайте их нашему менеджеру
+        .row
+          .col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4
+            %form
+              .form-group
+                %input#exampleInputEmail1.form-control{:placeholder => "Имя", :type => "text"}
+              .form-group
+                %input#exampleInputPassword1.form-control{:placeholder => "Телефон", :type => "text"}
+              .form-group
+                %textarea.form-control{:rows => "3", :placeholder => "Вопрос"}
+
+              %button.btn.btn-lg.btn-border.btn-border-red.btn-border-red-full{:type => "submit"} Отправить!
+
+
+    / Root element of PhotoSwipe. Must have class pswp.
+    .pswp{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      /
+        Background of PhotoSwipe.
+        It's a separate element as animating opacity is faster than rgba().
+      .pswp__bg
+      / Slides wrapper with overflow:hidden.
+      .pswp__scroll-wrap
+        /
+          Container that holds slides.
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on.
+        .pswp__container
+          .pswp__item
+          .pswp__item
+          .pswp__item
+        / Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.
+        .pswp__ui.pswp__ui--hidden
+          .pswp__top-bar
+            / Controls are self-explanatory. Order can be changed.
+            .pswp__counter
+            %button.pswp__button.pswp__button--close{:title => "Close (Esc)"}
+            %button.pswp__button.pswp__button--share{:title => "Share"}
+            %button.pswp__button.pswp__button--fs{:title => "Toggle fullscreen"}
+            %button.pswp__button.pswp__button--zoom{:title => "Zoom in/out"}
+            / Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR
+            / element will get class pswp__preloader--active when preloader is running
+            .pswp__preloader
+              .pswp__preloader__icn
+                .pswp__preloader__cut
+                  .pswp__preloader__donut
+          .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+            .pswp__share-tooltip
+          %button.pswp__button.pswp__button--arrow--left{:title => "Previous (arrow left)"}
+          %button.pswp__button.pswp__button--arrow--right{:title => "Next (arrow right)"}
+          .pswp__caption
+            .pswp__caption__center
+
+
+
+
     %script{:src => "js/main.js"}    
+
+    / http://ru.aliexpress.com/item/Wholesale-Lot-Mens-Golden-Chinese-Power-Dragon-Magnetic-Energy-Stainless-Steel-Bracelet-4330-Free-Shipping/1941756059.html?spm=2114.03020208.3.163.IyG6db&ws_ab_test=201407_5,201444_6,201409_4
+
+    / http://ru.aliexpress.com/item/Power-Ionics-3000ions-Sports-Waterproof-Titanium-Bracelet-Band-Improve-Sleeping/32282617300.html
+    / http://ru.aliexpress.com/item/P033-Noproblem-Ion-Balance-magnetic-energy-titanium-tourmaline-fashion-health-sport-bracelet/1657955520.html
+    / http://ru.aliexpress.com/item/10mm-Natural-Orange-Red-Agate-Sacral-Chakra-stones-Bracelet-Women-or-girls-Jewelry-Beautiful-Gift-B44/1576036320.html
+
+    / http://ru.aliexpress.com/item/free-shipping-black-colour-silicone-wristband-4-in-1-bio-elements-energy-stainless-steel-magnetic-bracelet/2042422036.html?spm=2114.03020208.3.95.Qeb915&ws_ab_test=201407_5,201444_6,201409_4
+
+    / http://ru.aliexpress.com/item/Fashion-Jewelry-Magnetic-316L-Stainless-Steel-Bracelet-For-Men-With-FIR-Negative-Ion-Germanium-8-5/1206262872.html?spm=2114.03020208.3.225.Qeb915&ws_ab_test=201407_5,201444_6,201409_4 video
+
+    / http://ru.aliexpress.com/item/Men-Women-s-Germanium-Titanium-Steel-Bracelet-316L-Power-Bracelet-Energe-Bangle-Birthday-Friendship-Sport-Gift/1779183084.html

@@ -1,0 +1,612 @@
+
+.color
+  &-black
+  &-black:before
+    background-color #000
+    
+  &-grey
+  &-grey:before
+    background-color #7bb18f
+
+  &-gold 
+  &-gold:before
+    background-color #e1bc90
+    
+  &-red
+  &-red:before
+    background-color #de5b48
+    
+  &-green
+  &-green:before
+    background-color #46b29d
+
+  &-yelow
+    background-color #f0ca4d
+    &:before
+      background-color #f0ca4d
+
+
+  &-red-black
+  &-red-black:before
+    background #1b1311
+    background linear-gradient(135deg, #1b1311 0%,#b33026 100%)
+
+  &-black-green
+  &-black-green:before
+    background #7db43d
+    background linear-gradient(135deg, #7db43d 0%,#000000 100%)
+
+  &-black-grey
+  &-black-grey:before
+    background #3f3f41
+    background linear-gradient(135deg, #3f3f41 0%,#000000 100%)
+
+  &-gray-green
+  &-gray-green:before
+    background #7bb18f
+    background linear-gradient(135deg, #7bb18f 0%,#515153 100%)
+
+  &-white-blue
+  &-white-blue:before
+    background #e5e6e8
+    background linear-gradient(135deg, #e5e6e8 0%,#104879 100%) 
+    
+  &-white-gray
+  &-white-gray:before
+    background #dedfe1
+    background linear-gradient(135deg, #dedfe1 0%,#fdfdfd 100%) 
+    
+  &-white-pink
+  &-white-pink:before
+    background #4c4c4e
+    background linear-gradient(135deg, #4c4c4e 0%,#c61460 100%) 
+    
+  &-white-turquoise
+  &-white-turquoise:before
+    background #e5e6e8
+    background linear-gradient(135deg, #e5e6e8 0%,#00858e 100%) 
+    
+  &-grey-gold
+  &-grey-gold:before
+    background #7bb18f
+    background linear-gradient(135deg, #7bb18f 0%,#e1bc90 100%) 
+    
+  &-black-gold
+  &-black-gold:before
+    background #000
+    background linear-gradient(135deg, #000 0%,#e1bc90 100%) 
+
+
+
+/* Flickity page dots */
+
+.slider .flickity-page-dots
+  bottom: 20px
+  opacity: 0
+  -webkit-transition: opacity .3s
+  transition: opacity .3s
+
+.no-touch .slider:hover .flickity-page-dots
+  opacity: 1
+
+.slider .flickity-page-dots .dot
+  background: #131417
+
+/* Product meta */
+
+.meta
+  position absolute
+  top 0
+  left 0
+  padding 0 1.6rem 1.6rem
+  text-align left
+
+.meta__brand
+  font-size: .85em
+  font-weight: bold
+  display: block
+  color: #595b64
+
+.meta__title
+  font-family 'Roboto', serif
+  font-size 2rem
+  font-weight 600
+  margin: 0
+  padding: .4em 0 .1em
+  
+
+/* Action style */
+
+.action
+  font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif
+  font-size: 1.05em
+  position: relative
+  overflow: hidden
+  margin: 0
+  padding: .25em
+  cursor: pointer
+  color: #fff
+  border: none
+  background: none
+  &:focus
+    outline: none
+
+.action--button
+  color: #5c5edc
+
+.no-touch .action--button:hover
+  color: #fff
+  outline: none
+
+.text-hidden
+  position: absolute
+  top: 200%
+
+
+/* Fixed bottom bar */
+
+.bar
+  position: fixed
+  z-index: 100
+  bottom: 0
+  left: 0
+  width: 100%
+  padding: 1.75em 5em
+  text-align: center
+  background: #191a1b
+  -webkit-transform: translate3d(0, 0, 0)
+  /* Fix for Chrome flicker on Mac ...party like we're in 2012! */
+
+.flexbox .filter
+  display: -webkit-flex
+  display: flex
+  -webkit-align-items: center
+  align-items: center
+  -webkit-justify-content: center
+  justify-content: center
+
+/* Filter */
+
+.filter
+  &__label
+    font-size: .85em
+    display: inline-block
+    margin: 0 2%
+    font-weight: bold
+    color: #393A3F
+
+  &__item
+    font-weight: bold
+    margin: 0 2%
+    padding: .1em
+    vertical-align: middle
+    color: #a3a3b3
+    border-bottom: 2px solid transparent
+
+    &--selected
+      color: #5c5edc
+      border-color: #5c5edc
+
+  .fa
+    font-size: 1.75em
+    display: none
+
+/* Shopping cart */
+
+.cd-cart
+  position absolute
+  z-index 2
+  top 24px
+  right 10px
+  height 50px
+  width 50px
+  background url('../img/cd-icon-cart.svg') no-repeat center center
+
+  span
+    position absolute
+    top 2px
+    right 5px
+    height 18px
+    width 18px
+    line-height 18px
+    background-color #46b29d
+    color #fff
+    font-size 1rem
+    font-weight bold
+    text-align center
+    border-radius 50%
+    
+    transform scale(0)
+    transition transform .2s 0s
+  
+
+  &.items-added span 
+    /* counter visible when a product is added to the cart */
+    transform scale(1)
+
+  @media (min-width: $screen-lg-min)
+    position fixed
+    top 30px
+    right 30px
+
+
+
+/* Resize grid items on smaller screens */
+
+// @media screen and (max-width: 65em)
+//   .grid__sizer, .grid__item, .grid__item--size-a
+//     width: 33.333%
+
+@media screen and (max-width: 50em)
+  // .grid__sizer, .grid__item, .grid__item--size-a
+  //   width: 50%
+  .bar
+    padding-left: 0
+    text-align: left
+
+@media screen and (max-width: 40em)
+  .bar
+    padding: .5em 4.5em .5em 0
+  .flexbox .filter
+    -webkit-justify-content: space-around
+    justify-content: space-around
+  .filter__item
+    height: 100%
+    padding: .5em .1em
+    border: none
+    .fa
+      display: inline-block
+  .filter__label, .action__text
+    display: none
+  // .cart
+  //   padding: 0 1em
+
+@media screen and (max-width: 25em)
+  // .grid
+  //   max-width: 75%
+  // .grid__loader
+  //   margin: 0 auto
+  // .grid__sizer, .grid__item, .grid__item--size-a
+  //   width: 100%
+  // .action--buy
+  //   font-size: 1.5em
+  //   padding: 1.15em 1.5em
+  //   -webkit-tap-highlight-color: transparent
+    
+
+
+
+
+/* -------------------------------- 
+
+Product Customization
+
+-------------------------------- */
+
+$box-size = 34px
+
+.grid
+  padding 0
+  position relative
+  text-align center
+  user-select none
+
+  &-view
+    background-color #f2f2f2
+    padding 7rem 0 20rem
+    overflow hidden
+
+
+  .slider
+    padding 0
+
+    .no-touch &
+      padding 0 0 1.25em
+
+    &__item
+      width 100%
+      min-height 100%
+      display flex
+      flex-direction column
+      justify-content center
+        
+      img
+        display block
+        width 100%
+        
+        @media screen and (max-width: $screen-sm-min)
+          width 80%
+          margin 0 auto
+  
+  &-items
+    position relative
+    margin 0
+
+  &__price
+    position absolute
+    border-radius 50%
+    right -1rem 
+    top -1rem
+    display inline-block
+    width 10rem
+    height 10rem
+    font-size 2rem
+    padding 4rem 0
+    line-height 2rem
+    color #fff
+    white-space nowrap
+    font-weight 600
+    z-index 1
+    transition all 0.5s ease
+    
+    .grid__item:hover &
+      transform scale(1.1,1.1) rotate(5deg)
+      
+    p 
+      margin 0
+      padding 0
+        
+    &-old
+      text-decoration line-through
+      margin-top -1.2rem !important
+      color #666
+      font-size 1.4rem
+
+
+  &__item
+    margin-bottom 2rem
+    
+    .touch &
+      margin-bottom 4rem
+    
+    &-inner
+      background-color #fff
+      box-shadow 0 2px 10px rgba(0, 0, 0, .08)
+
+    // .no-touch &:hover, &.hover
+    .no-touch &:hover
+    &:hover  
+      
+      .cd-customization
+        /* product customization visible */
+        pointer-events auto
+        visibility visible
+        opacity 1
+        // transition opacity .2s 0s
+
+      .meta
+        visibility hidden
+        opacity 1
+    
+    .touch &
+      .meta
+      .cd-customization
+        position relative
+        visibility visible
+        opacity 1
+    
+  &__info
+    position relative
+    
+        
+      
+
+.cd-customization 
+  position relative
+  z-index 3
+  // position absolute
+  // z-index 2
+  // left 0
+  // bottom 0
+  width 100%
+  padding 0 1.6rem 1.6rem 1.59rem 
+  // visibility hidden
+  // opacity 0
+  pointer-events none
+  // transition opacity .2s 0s
+  visibility hidden
+  opacity 0
+
+  &:after
+    clear both
+    content ''
+    display table
+
+  > *
+    float left
+
+  .color
+  .size
+  .add-to-cart
+    height 34px
+    position relative
+    overflow hidden
+
+
+  .color
+  .size 
+    /* these are the color and size options */
+    display inline-block
+    cursor pointer
+    box-shadow inset 0 0 0 1px #e5e5e5
+
+    /* Force Hardware Acceleration - fix a bug on Safari */
+    transform translateZ(0)
+    backface-visibility hidden
+
+    &:hover
+      box-shadow inset 0 0 0 1px #ccc
+
+    ul
+      list-style none
+      margin 0
+      padding 0
+      display inline-block
+      // position absolute
+      // left 50%
+      // top 50%
+      // bottom auto
+      // right auto
+      // transform translateX(-50%) translateY(-50%)
+      width 100%
+      border 1px solid transparent
+      
+      position relative
+      transform translateY(0)
+
+      li
+        position relative
+        height 34px
+    
+
+    for num in (1..20)
+    
+      &.selected-{num}
+        ul 
+          transform translateY( -( $box-size * (num - 1) ) )
+    
+        
+
+      
+    //   &:first-of-type
+    //     transform translateY(100%)
+
+    //   &:nth-of-type(2)
+    //     transform translateY(-100%)
+
+    //   &:nth-of-type(3)
+    //     transform translateY(0)
+
+    // &.selected-2 ul
+
+    //   li:first-of-type,
+    //   li:nth-of-type(2),
+    //   li:nth-of-type(3)
+    //     transform translateY(0)
+
+
+    // &.selected-3 ul
+      
+    //   li:first-of-type
+    //     transform translateY(0)
+
+    //   li:nth-of-type(2)
+    //     transform translateY(100%)
+      
+    //   li:nth-of-type(3)
+    //     transform translateY(-100%)
+
+
+    &.is-open
+      /* color/size list open - make ul element visible */
+      overflow visible
+      box-shadow none
+
+      &:after
+        /* remove the arrow icon for the size option element */
+        display: none
+
+      ul
+        box-shadow 0 2px 3px rgba(0, 0, 0, .1)
+        border-color #e5e5e5
+        background-color #fff
+
+      li:hover
+      li.active
+        background-color #f2f2f2
+
+  .color
+    width 34px
+
+    li 
+      /* replace color name with colored circle */
+      overflow hidden
+      text-indent 100%
+      white-space nowrap
+      color transparent
+      background transparent
+
+      &:before
+        /* this is the colored circle */
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        bottom auto
+        right auto
+        transform translateX(-50%) translateY(-50%)
+        height 10px
+        width 10px
+        border-radius 50%
+
+
+
+  .size
+    margin 0 6px
+
+    &:after 
+      /* arrow icon for the size option element */
+      content ''
+      position: absolute
+      right 7px
+      top 50%
+      margin-top -8px
+      display block
+      width 16px
+      height 16px
+      background url('../img/cd-icon-arrow.svg') no-repeat center center
+      pointer-events none
+
+    li
+      padding 0 1em
+
+  .size
+  .add-to-cart
+    width calc(50% - 23px)
+
+  .add-to-cart
+    text-transform uppercase
+    
+  .size li
+  .add-to-cart
+    font-size 1.2rem
+    font-weight 600
+    line-height 34px
+
+    em 
+      /* this is the button text message */
+      font inherit
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      /* Force Hardware Acceleration */
+      transform translateZ(0)
+      backface-visibility hidden
+      transition transform 0.3s
+    
+
+    svg
+      /* this is the check icon */
+      position absolute
+      left 50%
+      top 50%
+      width 100%
+      /* move the icon on the right - outside the button */
+      transform translateX(50%) translateY(-50%)
+      transition transform .3s
+
+    &.is-added 
+      em
+        /* product added to the cart - hide text message on the left with no transition*/
+        color transparent
+        transform translateX(-100%)
+        transition transform 0s
+
+      svg
+        /* product added to the cart - move the svg back inside the button */
+        transform translateX(-50%) translateY(-50%)
+        transition transform 0s   
+
+
